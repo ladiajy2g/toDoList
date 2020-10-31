@@ -1,0 +1,24 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "a simple to do list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ladiajy2g/todolist.git"
+  },
+  "author": "Dipo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ladiajy2g/todolist/issues"
+  },
+  "homepage": "https://github.com/ladiajy2g/todolist#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
