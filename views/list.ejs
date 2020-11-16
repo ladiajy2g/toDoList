@@ -5,14 +5,27 @@
         <h1><%=listTitle%></h1>
     </div>
     <div class="box">
-            <% for (let i=0; i<newListItems.length; i++){ %>
+        <!-- code block changed from for loop to forEach -->
+        <% newListItems.forEach(function(item) { %>
+            <form action="/delete" method="post">
+                <div class="item">
+                    <input type="checkbox" onChange="this.form.submit()" name='checkbox' value=<%=item._id%>>
+                   <p><%=item.name %></p> 
+                </div>
+                    <% }); %>
+                    <input type="hidden" name='listName' value='<%=listTitle%>'>
+                </form>
+
+        
+            <!-- code block using for loop commented out -->
+            <!-- <% for (let i=0; i<newListItems.length; i++){ %>
                 <div class="item">
                     <input type="checkbox">
-                    <p><%=newListItems[i]%></p>
+                    <p><%=newListItems[i].name%></p>
                 </div>
-           <%  } %>
+           <%  } %> -->
            <form class="item" action="/" method="post">
-            <input type="text" name='newItem' placeholder="New Item" autocomplete="off">
+            <input type="text" name='newItem' placeholder="New Item" autocomplete="off" autofocus>
             <button type="submit" name="list" value=<%=listTitle%>>+</button>
     </div>
     </form>
